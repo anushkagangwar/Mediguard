@@ -7,6 +7,8 @@ const { getIO } = require("../socket");
 const PatientCaregiver = require("../models/PatientCaregiver");
 
 // Runs every minute in IST
+
+console.log("🚀 missedMedicineScheduler loaded");
 cron.schedule(
   "* * * * *",
   async () => {

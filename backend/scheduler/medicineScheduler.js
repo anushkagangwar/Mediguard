@@ -6,6 +6,8 @@ const admin = require("../firebaseAdmin");
 const { getIO } = require("../socket");
 const PatientCaregiver = require("../models/PatientCaregiver");
 
+
+console.log("🚀 medicineScheduler loaded");
 cron.schedule(
   "* * * * *",
   async () => {
