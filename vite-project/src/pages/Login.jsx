@@ -15,7 +15,7 @@ export default function Login() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        " https://mediguard-vgkt.onrender.com/api/auth/login",
         {
           email,
           password,
@@ -45,7 +45,7 @@ export default function Login() {
 
       try {
   const response = await axios.post(
-    "http://localhost:5000/api/notification/save-token",
+    " https://mediguard-vgkt.onrender.com/api/notification/save-token",
     {
       email: res.data.user.email,
       fcmToken,
@@ -62,7 +62,7 @@ export default function Login() {
 if (res.data.user.role === "caregiver") {
 
   const patientRes = await axios.get(
-    `http://localhost:5000/api/patient-caregiver/dashboard/${res.data.user.id}`
+    ` https://mediguard-vgkt.onrender.com/api/patient-caregiver/dashboard/${res.data.user.id}`
   );
 
   localStorage.setItem(

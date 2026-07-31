@@ -57,7 +57,7 @@ const fetchCaregiver = async () => {
     }
 
     const res = await axios.get(
-      `http://localhost:5000/api/caregiver/${patientId}`
+      ` https://mediguard-vgkt.onrender.com/api/caregiver/${patientId}`
     );
 
     console.log("Caregiver:", res.data);
@@ -92,11 +92,11 @@ const fetchCaregiver = async () => {
 
     // Update missed medicines
     await axios.put(
-      "http://localhost:5000/api/medicine/check-missed"
+      " https://mediguard-vgkt.onrender.com/api/medicine/check-missed"
     );
 
     const res = await axios.get(
-      `http://localhost:5000/api/medicine/patient/${patientId}`
+      ` https://mediguard-vgkt.onrender.com/api/medicine/patient/${patientId}`
     );
 
     console.log("Medicines Response:", res.data);

@@ -38,7 +38,7 @@ export default function Notifications() {
   const fetchNotifications = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/notification/patient/${patientId}`
+        ` https://mediguard-vgkt.onrender.com/api/notification/patient/${patientId}`
         
       );
 
@@ -51,7 +51,7 @@ export default function Notifications() {
   const markAsRead = async (id) => {
     try {
       await axios.put(
-        `http://localhost:5000/api/notification/${id}/read`
+        ` https://mediguard-vgkt.onrender.com/api/notification/${id}/read`
       );
 
       fetchNotifications();
@@ -63,7 +63,7 @@ export default function Notifications() {
   const deleteNotification = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/notification/${id}`
+        ` https://mediguard-vgkt.onrender.com/api/notification/${id}`
       );
 
       fetchNotifications();

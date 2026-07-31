@@ -17,14 +17,21 @@ export const requestNotificationPermission = async () => {
         "BEBFcHMgKHxhNh-EwLsnDqkA6ePiJ0f4ErXwzg8P5Lg3qBbsusbgnD8aNI9C5IpQGZvlo7IVd3lvHWgijTT9wrA",
       serviceWorkerRegistration: registration,
     });
+    console.log("Generated Token:", token);
+
+       if (!token) {
+       console.error("No FCM token returned.");
+     }
 
     console.log("NEW TOKEN:", token);
 
     return token;
   } catch (err) {
-    console.log(err);
-    return null;
-  }
+  console.error("FCM Error:", err);
+  console.error("Error Code:", err.code);
+  console.error("Error Message:", err.message);
+  return null;
+}
 };
 export const listenForNotifications = () => {
   console.log("Listening for Firebase foreground messages...");

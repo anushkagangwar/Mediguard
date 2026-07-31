@@ -23,11 +23,11 @@ export default function Alerts() {
 
 if (user.role === "patient") {
   res = await axios.get(
-    `http://localhost:5000/api/medicine/patient/${user.id}`
+    ` https://mediguard-vgkt.onrender.com/api/medicine/patient/${user.id}`
   );
 } else {
   res = await axios.get(
-    `http://localhost:5000/api/medicine/caregiver/${user.id}`
+    ` https://mediguard-vgkt.onrender.com/api/medicine/caregiver/${user.id}`
   );
 }
 

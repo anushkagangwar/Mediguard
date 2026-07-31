@@ -8,7 +8,7 @@ export default function AddMedicines() {
   );
 
   const API =
-    "http://localhost:5000/api/medicine";
+    " https://mediguard-vgkt.onrender.com/api/medicine";
 
   const [showModal, setShowModal] =
     useState(false);

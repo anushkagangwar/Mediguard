@@ -21,7 +21,7 @@ const fetchMedicines = async () => {
 
     // ✅ Update overdue medicines first
     await axios.put(
-      "http://localhost:5000/api/medicine/check-missed"
+      " https://mediguard-vgkt.onrender.com/api/medicine/check-missed"
     );
 
     // ✅ Then fetch medicines
@@ -32,11 +32,11 @@ const fetchMedicines = async () => {
 
 if (user.role === "patient") {
   res = await axios.get(
-    `http://localhost:5000/api/medicine/patient/${user.id}`
+    ` https://mediguard-vgkt.onrender.com/api/medicine/patient/${user.id}`
   );
 } else {
   res = await axios.get(
-    `http://localhost:5000/api/medicine/caregiver/${user.id}`
+    ` https://mediguard-vgkt.onrender.com/api/medicine/caregiver/${user.id}`
   );
 }
 

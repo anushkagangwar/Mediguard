@@ -18,7 +18,7 @@ export default function Caregiver() {
   const fetchCaregiver = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/caregiver/${user.id}`
+        ` https://mediguard-vgkt.onrender.com/api/caregiver/${user.id}`
       );
 
       if (res.data) {
@@ -45,7 +45,7 @@ export default function Caregiver() {
   try {
     // Save caregiver details
     await axios.post(
-      "http://localhost:5000/api/caregiver",
+      " https://mediguard-vgkt.onrender.com/api/caregiver",
       {
         patientId: user.id,
         name: caregiver.name,
@@ -57,7 +57,7 @@ export default function Caregiver() {
 
     // Create patient-caregiver link
     await axios.post(
-     "http://localhost:5000/api/patient-caregiver/link",
+     " https://mediguard-vgkt.onrender.com/api/patient-caregiver/link",
       {
         patientId: user.id,
         caregiverEmail: caregiver.email,

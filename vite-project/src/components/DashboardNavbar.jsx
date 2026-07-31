@@ -27,7 +27,7 @@ export default function DashboardNavbar() {
     const patientId = localStorage.getItem("userId");
 
     const res = await axios.get(
-      `http://localhost:5000/api/notification/unread/${patientId}`
+      ` https://mediguard-vgkt.onrender.com/api/notification/unread/${patientId}`
     );
 
     setUnreadCount(res.data.count);
